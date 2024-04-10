@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.gbx1 = new System.Windows.Forms.GroupBox();
-            this.gbx2 = new System.Windows.Forms.GroupBox();
-            this.btnSave1 = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.radFire1 = new System.Windows.Forms.RadioButton();
-            this.radIce1 = new System.Windows.Forms.RadioButton();
-            this.radWind1 = new System.Windows.Forms.RadioButton();
-            this.radEarth1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPlayer1Name = new System.Windows.Forms.TextBox();
             this.txtDragon1Name = new System.Windows.Forms.TextBox();
+            this.txtPlayer1Name = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSave1 = new System.Windows.Forms.Button();
+            this.gbx2 = new System.Windows.Forms.GroupBox();
+            this.radEarth1 = new System.Windows.Forms.RadioButton();
+            this.radWind1 = new System.Windows.Forms.RadioButton();
+            this.radIce1 = new System.Windows.Forms.RadioButton();
+            this.radFire1 = new System.Windows.Forms.RadioButton();
+            this.btnStart = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -51,6 +51,7 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.gbx1.SuspendLayout();
             this.gbx2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,6 +73,48 @@
             this.gbx1.TabStop = false;
             this.gbx1.Text = "Player 1";
             // 
+            // txtDragon1Name
+            // 
+            this.txtDragon1Name.Location = new System.Drawing.Point(99, 79);
+            this.txtDragon1Name.Name = "txtDragon1Name";
+            this.txtDragon1Name.Size = new System.Drawing.Size(144, 20);
+            this.txtDragon1Name.TabIndex = 5;
+            // 
+            // txtPlayer1Name
+            // 
+            this.txtPlayer1Name.Location = new System.Drawing.Point(97, 41);
+            this.txtPlayer1Name.Name = "txtPlayer1Name";
+            this.txtPlayer1Name.Size = new System.Drawing.Size(146, 20);
+            this.txtPlayer1Name.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Dragon Name:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Player Name:";
+            // 
+            // btnSave1
+            // 
+            this.btnSave1.Location = new System.Drawing.Point(11, 279);
+            this.btnSave1.Name = "btnSave1";
+            this.btnSave1.Size = new System.Drawing.Size(236, 38);
+            this.btnSave1.TabIndex = 1;
+            this.btnSave1.Text = "Save";
+            this.btnSave1.UseVisualStyleBackColor = true;
+            this.btnSave1.Click += new System.EventHandler(this.btnSave1_Click);
+            // 
             // gbx2
             // 
             this.gbx2.Controls.Add(this.radEarth1);
@@ -85,45 +128,16 @@
             this.gbx2.TabStop = false;
             this.gbx2.Text = "Dragons ";
             // 
-            // btnSave1
+            // radEarth1
             // 
-            this.btnSave1.Location = new System.Drawing.Point(11, 279);
-            this.btnSave1.Name = "btnSave1";
-            this.btnSave1.Size = new System.Drawing.Size(236, 38);
-            this.btnSave1.TabIndex = 1;
-            this.btnSave1.Text = "Save";
-            this.btnSave1.UseVisualStyleBackColor = true;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(43, 372);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(537, 66);
-            this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            // 
-            // radFire1
-            // 
-            this.radFire1.AutoSize = true;
-            this.radFire1.Location = new System.Drawing.Point(15, 19);
-            this.radFire1.Name = "radFire1";
-            this.radFire1.Size = new System.Drawing.Size(80, 17);
-            this.radFire1.TabIndex = 0;
-            this.radFire1.TabStop = true;
-            this.radFire1.Text = "Fire Dragon";
-            this.radFire1.UseVisualStyleBackColor = true;
-            // 
-            // radIce1
-            // 
-            this.radIce1.AutoSize = true;
-            this.radIce1.Location = new System.Drawing.Point(15, 42);
-            this.radIce1.Name = "radIce1";
-            this.radIce1.Size = new System.Drawing.Size(76, 17);
-            this.radIce1.TabIndex = 1;
-            this.radIce1.TabStop = true;
-            this.radIce1.Text = "Ice dragon";
-            this.radIce1.UseVisualStyleBackColor = true;
+            this.radEarth1.AutoSize = true;
+            this.radEarth1.Location = new System.Drawing.Point(15, 88);
+            this.radEarth1.Name = "radEarth1";
+            this.radEarth1.Size = new System.Drawing.Size(88, 17);
+            this.radEarth1.TabIndex = 3;
+            this.radEarth1.TabStop = true;
+            this.radEarth1.Text = "Earth Dragon";
+            this.radEarth1.UseVisualStyleBackColor = true;
             // 
             // radWind1
             // 
@@ -136,48 +150,36 @@
             this.radWind1.Text = "Wind Dragon";
             this.radWind1.UseVisualStyleBackColor = true;
             // 
-            // radEarth1
+            // radIce1
             // 
-            this.radEarth1.AutoSize = true;
-            this.radEarth1.Location = new System.Drawing.Point(15, 88);
-            this.radEarth1.Name = "radEarth1";
-            this.radEarth1.Size = new System.Drawing.Size(88, 17);
-            this.radEarth1.TabIndex = 3;
-            this.radEarth1.TabStop = true;
-            this.radEarth1.Text = "Earth Dragon";
-            this.radEarth1.UseVisualStyleBackColor = true;
+            this.radIce1.AutoSize = true;
+            this.radIce1.Location = new System.Drawing.Point(15, 42);
+            this.radIce1.Name = "radIce1";
+            this.radIce1.Size = new System.Drawing.Size(76, 17);
+            this.radIce1.TabIndex = 1;
+            this.radIce1.TabStop = true;
+            this.radIce1.Text = "Ice dragon";
+            this.radIce1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // radFire1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Player Name:";
+            this.radFire1.AutoSize = true;
+            this.radFire1.Location = new System.Drawing.Point(15, 19);
+            this.radFire1.Name = "radFire1";
+            this.radFire1.Size = new System.Drawing.Size(80, 17);
+            this.radFire1.TabIndex = 0;
+            this.radFire1.TabStop = true;
+            this.radFire1.Text = "Fire Dragon";
+            this.radFire1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnStart
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Dragon Name:";
-            // 
-            // txtPlayer1Name
-            // 
-            this.txtPlayer1Name.Location = new System.Drawing.Point(97, 41);
-            this.txtPlayer1Name.Name = "txtPlayer1Name";
-            this.txtPlayer1Name.Size = new System.Drawing.Size(146, 20);
-            this.txtPlayer1Name.TabIndex = 4;
-            // 
-            // txtDragon1Name
-            // 
-            this.txtDragon1Name.Location = new System.Drawing.Point(99, 79);
-            this.txtDragon1Name.Name = "txtDragon1Name";
-            this.txtDragon1Name.Size = new System.Drawing.Size(144, 20);
-            this.txtDragon1Name.TabIndex = 5;
+            this.btnStart.Location = new System.Drawing.Point(43, 372);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(537, 66);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -292,11 +294,20 @@
             this.radioButton8.Text = "Fire Dragon";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
+            // rtbLog
+            // 
+            this.rtbLog.Location = new System.Drawing.Point(618, 88);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.Size = new System.Drawing.Size(130, 122);
+            this.rtbLog.TabIndex = 7;
+            this.rtbLog.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rtbLog);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.gbx1);
@@ -339,6 +350,7 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RichTextBox rtbLog;
     }
 }
 
