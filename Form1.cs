@@ -30,9 +30,16 @@ namespace WindowsFormsApp3
         private void btnSave1_Click(object sender, EventArgs e)
 
         {
-            player1Name = txtPlayer1Name.Text;
-            dragon1Name = txtDragon1Name.Text;
-            rtbLog.Text = "Player name:" + player1Name + "\n Dragon Name:" + dragon1Name + "\nplayer choice" +player1Choice;
+            if (txtPlayer1Name.Text != "" && txtDragon1Name.Text != "")
+            {
+                player1Name = txtPlayer1Name.Text;
+                dragon1Name = txtDragon1Name.Text;
+                rtbLog.Text = "Player name:" + player1Name + "\n Dragon Name:" + dragon1Name + "\nplayer choice" + player1Choice;
+            }
+            else
+            {
+                rtbLog.Text = " you didnt enter names dimwit";
+            }
             
         }
 
@@ -71,9 +78,16 @@ namespace WindowsFormsApp3
 
         private void btnSave2_Click(object sender, EventArgs e)
         {
-            player2Name = txtPlayer2Name.Text;
-            dragon2Name = txtDragon2Name.Text;
-            rtbLog2.Text = "Player name:" + player2Name + "\n Dragon Name:" + dragon2Name + "\nplayer choice" ;
+            if ( txtPlayer2Name.Text != "" && txtDragon2Name.Text != "")
+            {
+                player2Name = txtPlayer2Name.Text;
+                dragon2Name = txtDragon2Name.Text;
+                rtbLog2.Text = "Player name:" + player2Name + "\n Dragon Name:" + dragon2Name + "\nplayer choice";
+            }
+            else
+            {
+                rtbLog2.Text = " you didnt enter names dimwit";
+            }
         }
     }
 }
