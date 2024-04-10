@@ -127,6 +127,7 @@
             this.gbx2.TabIndex = 0;
             this.gbx2.TabStop = false;
             this.gbx2.Text = "Dragons ";
+            this.gbx2.Enter += new System.EventHandler(this.gbx2_Enter);
             // 
             // radEarth1
             // 
@@ -138,6 +139,7 @@
             this.radEarth1.TabStop = true;
             this.radEarth1.Text = "Earth Dragon";
             this.radEarth1.UseVisualStyleBackColor = true;
+            this.radEarth1.CheckedChanged += new System.EventHandler(this.radEarth1_CheckedChanged);
             // 
             // radWind1
             // 
@@ -149,6 +151,7 @@
             this.radWind1.TabStop = true;
             this.radWind1.Text = "Wind Dragon";
             this.radWind1.UseVisualStyleBackColor = true;
+            this.radWind1.CheckedChanged += new System.EventHandler(this.radWind1_CheckedChanged);
             // 
             // radIce1
             // 
@@ -160,6 +163,7 @@
             this.radIce1.TabStop = true;
             this.radIce1.Text = "Ice dragon";
             this.radIce1.UseVisualStyleBackColor = true;
+            this.radIce1.CheckedChanged += new System.EventHandler(this.radIce1_CheckedChanged);
             // 
             // radFire1
             // 
@@ -171,6 +175,7 @@
             this.radFire1.TabStop = true;
             this.radFire1.Text = "Fire Dragon";
             this.radFire1.UseVisualStyleBackColor = true;
+            this.radFire1.CheckedChanged += new System.EventHandler(this.radFire1_CheckedChanged);
             // 
             // btnStart
             // 
@@ -180,6 +185,7 @@
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // groupBox3
             // 
