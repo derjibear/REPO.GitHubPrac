@@ -18,6 +18,8 @@ namespace WindowsFormsApp3
         
         string player1Name;
         string dragon1Name;
+        string player2Name;
+        string dragon2Name;
         double player1Choice;
         double player2Choice;
         public Form1()
@@ -64,7 +66,14 @@ namespace WindowsFormsApp3
         {
             var Form2 = new Form2();
             this.Hide();
-            Form2.Show();
+            Form2.ShowDialog();
+        }
+
+        private void btnSave2_Click(object sender, EventArgs e)
+        {
+            player2Name = txtPlayer2Name.Text;
+            dragon2Name = txtDragon2Name.Text;
+            rtbLog2.Text = "Player name:" + player2Name + "\n Dragon Name:" + dragon2Name + "\nplayer choice" ;
         }
     }
 }
